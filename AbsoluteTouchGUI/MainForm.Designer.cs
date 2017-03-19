@@ -16,6 +16,7 @@ namespace AbsoluteTouchGUI
 {
 	partial class MainForm
 	{
+		bool started = false;
 		System.Diagnostics.Process process = new System.Diagnostics.Process();
 		System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
 
@@ -466,6 +467,7 @@ namespace AbsoluteTouchGUI
 				StartButton.Visible= false;
 				StopButton.Visible = true;
 				resetButton.Visible = true;
+				started = true;
 			}else{
 				MessageBox.Show("AbsolutePath.exe is not found");
 			}
@@ -473,6 +475,7 @@ namespace AbsoluteTouchGUI
 		
 		void StopButtonClick(object sender, System.EventArgs e)
 		{
+			started = false;
 			process.Kill();
 			StopButton.Visible = false;
 			StartButton.Visible = true;
@@ -481,8 +484,7 @@ namespace AbsoluteTouchGUI
 		
 		void QuitButtonClick(object sender, System.EventArgs e)
 		{
-			System.Diagnostics.Process[] proc = System.Diagnostics.Process.GetProcessesByName("AbsoluteTouch.exe");
-			if (proc.Length > 0)
+			if (started)
 			{
 				process.Kill();
 			}
