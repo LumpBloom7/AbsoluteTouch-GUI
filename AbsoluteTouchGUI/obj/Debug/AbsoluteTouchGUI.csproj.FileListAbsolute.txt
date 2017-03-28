@@ -6,3 +6,19 @@ C:\Users\Lee Koon Wong\Documents\SharpDevelop Projects\AbsoluteTouchGUI\Absolute
 C:\Users\Lee Koon Wong\Documents\SharpDevelop Projects\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.pdb
 C:\Users\Lee Koon Wong\Documents\SharpDevelop Projects\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.exe
 C:\Users\Lee Koon Wong\Documents\SharpDevelop Projects\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.pdb
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.exe.config
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.exe
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.pdb
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.csprojResolveAssemblyReference.cache
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.MainForm.resources
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.csproj.GenerateResource.Cache
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.exe
+F:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.pdb
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.csprojResolveAssemblyReference.cache
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.MainForm.resources
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.csproj.GenerateResource.Cache
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.exe
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\obj\Debug\AbsoluteTouchGUI.pdb
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.exe.config
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.exe
+H:\GitHub\AbsoluteTouchGUI\AbsoluteTouchGUI\bin\Debug\AbsoluteTouchGUI.pdb

@@ -14,11 +14,11 @@ using System.Reflection;
 
 namespace AbsoluteTouchGUI
 {
+	
 	partial class MainForm
 	{
 		bool started = false;
-		System.Diagnostics.Process process = new System.Diagnostics.Process();
-		System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+		
 
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -77,6 +77,12 @@ namespace AbsoluteTouchGUI
 			this.label5 = new System.Windows.Forms.Label();
 			this.resetButton = new System.Windows.Forms.Button();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.showWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.hideWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.stopServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.ServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.Sx2IN)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Sy2IN)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Sx1IN)).BeginInit();
@@ -86,6 +92,7 @@ namespace AbsoluteTouchGUI
 			((System.ComponentModel.ISupportInitialize)(this.Tx1IN)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Ty1IN)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.smoothingInput)).BeginInit();
+			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// QuitButton
@@ -207,10 +214,10 @@ namespace AbsoluteTouchGUI
 			this.Sx2IN.Size = new System.Drawing.Size(46, 20);
 			this.Sx2IN.TabIndex = 7;
 			this.Sx2IN.Value = new decimal(new int[] {
-			                               	100,
-			                               	0,
-			                               	0,
-			                               	0});
+			100,
+			0,
+			0,
+			0});
 			// 
 			// Sy2IN
 			// 
@@ -219,10 +226,10 @@ namespace AbsoluteTouchGUI
 			this.Sy2IN.Size = new System.Drawing.Size(46, 20);
 			this.Sy2IN.TabIndex = 7;
 			this.Sy2IN.Value = new decimal(new int[] {
-			                               	100,
-			                               	0,
-			                               	0,
-			                               	0});
+			100,
+			0,
+			0,
+			0});
 			// 
 			// Sx1IN
 			// 
@@ -245,10 +252,10 @@ namespace AbsoluteTouchGUI
 			this.Tx2IN.Size = new System.Drawing.Size(46, 20);
 			this.Tx2IN.TabIndex = 7;
 			this.Tx2IN.Value = new decimal(new int[] {
-			                               	100,
-			                               	0,
-			                               	0,
-			                               	0});
+			100,
+			0,
+			0,
+			0});
 			// 
 			// Ty2IN
 			// 
@@ -257,10 +264,10 @@ namespace AbsoluteTouchGUI
 			this.Ty2IN.Size = new System.Drawing.Size(46, 20);
 			this.Ty2IN.TabIndex = 7;
 			this.Ty2IN.Value = new decimal(new int[] {
-			                               	100,
-			                               	0,
-			                               	0,
-			                               	0});
+			100,
+			0,
+			0,
+			0});
 			// 
 			// Tx1IN
 			// 
@@ -292,10 +299,10 @@ namespace AbsoluteTouchGUI
 			this.smoothingInput.Size = new System.Drawing.Size(46, 20);
 			this.smoothingInput.TabIndex = 7;
 			this.smoothingInput.Value = new decimal(new int[] {
-			                                        	60,
-			                                        	0,
-			                                        	0,
-			                                        	0});
+			50,
+			0,
+			0,
+			0});
 			// 
 			// DrawingMode
 			// 
@@ -358,10 +365,60 @@ namespace AbsoluteTouchGUI
 			// 
 			// notifyIcon1
 			// 
+			this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
 			this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-			this.notifyIcon1.Text = "notifyIcon1";
+			this.notifyIcon1.Text = "AbsoluteTouch GUI";
 			this.notifyIcon1.Visible = true;
 			this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon1MouseDoubleClick);
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.showWindowToolStripMenuItem,
+			this.hideWindowToolStripMenuItem,
+			this.stopServiceToolStripMenuItem,
+			this.ServiceToolStripMenuItem,
+			this.quitToolStripMenuItem});
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.ShowImageMargin = false;
+			this.contextMenuStrip1.Size = new System.Drawing.Size(126, 114);
+			// 
+			// showWindowToolStripMenuItem
+			// 
+			this.showWindowToolStripMenuItem.Name = "showWindowToolStripMenuItem";
+			this.showWindowToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+			this.showWindowToolStripMenuItem.Text = "Show Window";
+			this.showWindowToolStripMenuItem.Visible = false;
+			this.showWindowToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItemClick);
+			// 
+			// hideWindowToolStripMenuItem
+			// 
+			this.hideWindowToolStripMenuItem.Name = "hideWindowToolStripMenuItem";
+			this.hideWindowToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+			this.hideWindowToolStripMenuItem.Text = "Hide Window";
+			this.hideWindowToolStripMenuItem.Click += new System.EventHandler(this.hideToolStripMenuItemClick);
+			// 
+			// stopServiceToolStripMenuItem
+			// 
+			this.stopServiceToolStripMenuItem.Name = "stopServiceToolStripMenuItem";
+			this.stopServiceToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+			this.stopServiceToolStripMenuItem.Text = "Stop Service";
+			this.stopServiceToolStripMenuItem.Visible = false;
+			this.stopServiceToolStripMenuItem.Click += new System.EventHandler(this.stopServiceToolStripMenuItemClick);
+			// 
+			// ServiceToolStripMenuItem
+			// 
+			this.ServiceToolStripMenuItem.Name = "ServiceToolStripMenuItem";
+			this.ServiceToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+			this.ServiceToolStripMenuItem.Text = "Start Service";
+			this.ServiceToolStripMenuItem.Click += new System.EventHandler(this.startServiceToolStripMenuItemClick);
+			// 
+			// quitToolStripMenuItem
+			// 
+			this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+			this.quitToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+			this.quitToolStripMenuItem.Text = "Quit";
+			this.quitToolStripMenuItem.Click += new System.EventHandler(this.QuitToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 
@@ -414,8 +471,11 @@ namespace AbsoluteTouchGUI
 			((System.ComponentModel.ISupportInitialize)(this.Tx1IN)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Ty1IN)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.smoothingInput)).EndInit();
+			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
+
 		}
+
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
 		private System.Windows.Forms.Button resetButton;
 		private System.Windows.Forms.Label label5;
@@ -445,6 +505,12 @@ namespace AbsoluteTouchGUI
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Button StartButton;
 		private System.Windows.Forms.Button QuitButton;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem ServiceToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem stopServiceToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem showWindowToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem hideWindowToolStripMenuItem;
 		
 		void StartButtonClick(object sender, System.EventArgs e)
 		{
@@ -467,7 +533,35 @@ namespace AbsoluteTouchGUI
 				StartButton.Visible= false;
 				StopButton.Visible = true;
 				resetButton.Visible = true;
-				started = true;
+				ServiceToolStripMenuItem.Visible = false;
+				stopServiceToolStripMenuItem.Visible = true;
+			}else{
+				MessageBox.Show("AbsolutePath.exe is not found");
+			}
+		}
+		void StartButtonClick()
+		{
+			string command = "-t " + 	Tx1IN.Value.ToString() + "," + 	Ty1IN.Value.ToString() + "," + 	Tx2IN.Value.ToString() + "," + 	Ty2IN.Value.ToString();
+			command += " -s " + Sx1IN.Value.ToString() + "," + Sy1IN.Value.ToString() + "," + Sx2IN.Value.ToString() + "," + Sy2IN.Value.ToString();
+			command += " -w " + smoothingInput.Value.ToString();
+			if(DrawingMode.Checked){
+				command += " -c";
+			}
+			if(EnableTouchpad.Checked){
+				command += " -m";
+			}
+			if(File.Exists("AbsoluteTouch.exe")){
+				startInfo.UseShellExecute = true;
+				startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+				startInfo.FileName = "AbsoluteTouch.exe";
+				startInfo.Arguments = command;
+				process.StartInfo = startInfo;
+				process.Start();
+				StartButton.Visible= false;
+				StopButton.Visible = true;
+				resetButton.Visible = true;
+				ServiceToolStripMenuItem.Visible = false;
+				stopServiceToolStripMenuItem.Visible = true;
 			}else{
 				MessageBox.Show("AbsolutePath.exe is not found");
 			}
@@ -475,22 +569,32 @@ namespace AbsoluteTouchGUI
 		
 		void StopButtonClick(object sender, System.EventArgs e)
 		{
-			started = false;
 			process.Kill();
 			StopButton.Visible = false;
 			StartButton.Visible = true;
 			resetButton.Visible = false;
+			ServiceToolStripMenuItem.Visible = true;
+			stopServiceToolStripMenuItem.Visible = false;
 		}
-		
+		void StopButtonClick()
+		{
+			process.Kill();
+			StopButton.Visible = false;
+			StartButton.Visible = true;
+			resetButton.Visible = false;
+			ServiceToolStripMenuItem.Visible = true;
+			stopServiceToolStripMenuItem.Visible = false;
+		}
 		void QuitButtonClick(object sender, System.EventArgs e)
 		{
-			if (started)
-			{
-				process.Kill();
-			}
+			process.Kill();
 			Application.Exit();
 		}
-		
+		void QuitButtonClick()
+		{
+			process.Kill();
+			Application.Exit();
+		}
 		void ResetButtonClick(object sender, EventArgs e)
 		{
 			process.Kill();
